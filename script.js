@@ -80,4 +80,16 @@ console.log(first); // 1
 */
 
 //task4
+let namesArray = ['Yevhenii', 'Vlada', 'Oleksandr', 'Maksym', 'Danylo', 'Sofia', 'Dmytro'];
+document.addEventListener('DOMContentLoaded', () => {
+    const nameList = document.getElementById('nameList');
 
+    namesArray.forEach(name => {
+        const listItem = document.createElement('li');
+        listItem.textContent = name;
+        listItem.addEventListener('click', () => {
+            alert(`Hello, ${name}`);
+        });
+        nameList.appendChild(listItem);
+    });
+});
